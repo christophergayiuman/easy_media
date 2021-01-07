@@ -11,9 +11,9 @@ def get_website_url(user_answer):
     if user_answer == 1:
         requested_url = "https://www.facebook.com/login/"
     if user_answer == 2:
-        requested_url = "https://twitter.com/login"
+        requested_url = "https://www.instagram.com/accounts/login/"
     if user_answer == 3:
-        requested_url = "https://www.reddit.com/login/?dest=https%3A%2F%2Fwww.reddit.com%2F"
+        requested_url = "https://www.reddit.com/login/"
     return requested_url
 
 
@@ -26,6 +26,6 @@ def get_website_url(user_answer):
 #     search.send_keys(Keys.RETURN)
 
 if __name__ == "__main__":
-    print(user_config['facebook_login'][0])
+    print(user_config)
     # Establishing the driver
     PATH = "C:\webdrivers\chromedriver.exe"
