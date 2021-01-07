@@ -1,9 +1,17 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+import json
+
+
+# Getting detais from config file
+f = open('config.json', )
+user_config = json.load(f)
 
 # Establishing the driver
 PATH = 'C:\webdrivers\chromedriver.exe'
-driver = webdriver.Chrome(PATH)
+# driver = webdriver.Chrome(PATH)
+
+
 
 
 def get_website_url(userAnswer):
@@ -16,9 +24,17 @@ def get_website_url(userAnswer):
     return requested_url
 
 
-def facebook_login(requested_url):
-    driver.get(requested_url)
+# def facebook_login(requested_url):
+#     driver.get(requested_url)
+#     fb_username_xpath = '//*[@id="email"]'
+#     fb_password_xpath = '//*[@id="pass"]'
+#     search = driver.find_element_by_xpath(fb_username_xpath)
+#     search.send_keys('***@gmai.com')
+#     search.send_keys(Keys.RETURN)
+
+if __name__ == "__main__":
+    print(type(user_config['facebook_login']))
 
 
-answer = get_website_url(1)
-facebook_login(answer)
+# answer = get_website_url(1)
+# facebook_login(answer)
